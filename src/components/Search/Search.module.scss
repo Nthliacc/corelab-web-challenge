@@ -20,9 +20,19 @@
     text-decoration: none;
     background-color: transparent;
     outline: none;
-    :focus-visible {
+  input {
+    height: 100%;
+    border: 0;
+    color: #9a9a9a;
+    font-size: small;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    &:focus-visible {
       outline: none;
     }
+  }
     &::placeholder {
       color: #9a9a9a;
       font-size: small;
