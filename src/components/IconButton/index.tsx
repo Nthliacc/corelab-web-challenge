@@ -1,24 +1,17 @@
 import React from "react";
-import { IconType } from "react-icons"; // Importe o tipo IconType
-import styles from "./IconButton.module.scss"; // Importe o arquivo de estilos
-// Defina as props do componente IconButton
+import { IconType } from "react-icons";
+import styles from "./IconButton.module.scss";
 interface IconButtonProps {
-  Icon: IconType; // O ícone será passado como uma prop
-  onClick?: () => void; // Função de clique opcional
-  size?: number; // Tamanho do ícone (opcional)
-  color?: string; // Cor do ícone (opcional)
-  className?: string; // Classes CSS adicionais (opcional)
-  [key: string]: any; // Permita outras props
+  Icon: IconType;
+  onClick?: () => void;
+  size?: number;
+  color?: string;
+  className?: string;
+  [key: string]: any;
 }
 
 const IconButton: React.FC<IconButtonProps> = (
-  {
-    Icon, // Renomeie a prop para Icon (convenção para componentes)
-    onClick,
-    size = 24,
-    color = "#4f4f4f",
-    className = "",
-  },
+  { Icon, onClick, size = 24, color = "#4f4f4f", className = "" },
   ...rest
 ) => {
   return (
@@ -27,7 +20,6 @@ const IconButton: React.FC<IconButtonProps> = (
       className={`${className}` + styles.Icon}
       {...rest}
     >
-      {/* Renderize o ícone */}
       {Icon && <Icon size={size} color={color} />}
     </button>
   );
