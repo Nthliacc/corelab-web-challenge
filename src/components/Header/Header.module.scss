@@ -3,7 +3,15 @@
 .Container {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+}
   align-items: center;
   gap: 18px;
   padding: 1rem 2rem;
