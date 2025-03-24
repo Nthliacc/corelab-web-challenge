@@ -24,7 +24,7 @@ const TasksList = () => {
           <Card key={task.id} task={task} />
         ))}
       </div>
-      {tasks.length > 10 && (
+      {tasks.length >= 10 && (
         <div className={styles.pagination}>
           <button
             name="previous"
